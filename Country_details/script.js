@@ -6,12 +6,9 @@ xhr.open("GET",url);
 xhr.send();
 
 xhr.onload = () => {
-    // console.log(JSON.parse(xhr.response))
+
     let data = JSON.parse(xhr.response)
     
-    for (let key in data ){
-        console.log(key,"=>",data[key])
-    }
     
     for (let i =0; i<data.length; i++){
         console.log("Name ==>",data[i].name.common)
